@@ -85,6 +85,7 @@
 #include "FVParser.h"
 #include "Dataset.h"
 #include "Logger.h"
+#include <climits>
 #include <string>
 
 string toString(int i);
@@ -175,4 +176,3 @@ class Random {
 };
 
 #endif
-

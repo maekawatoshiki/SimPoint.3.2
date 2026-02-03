@@ -83,6 +83,7 @@
 
 #include <vector>
 #include <cstdio>
+#include <iosfwd>
 
 using namespace std;
 
@@ -127,4 +128,3 @@ class Datapoint : public vector<double> {
 ostream &operator<<(ostream &os, const Datapoint &dp);
 
 #endif
-

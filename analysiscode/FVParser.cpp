@@ -78,6 +78,7 @@
 
 #include "FVParser.h"
 #include "Utilities.h"
+#include <cstring>
 #include <string>
 
 // take care of a difference between G++ 2.96 and 3.x
@@ -98,8 +99,8 @@ FVParser::FVParser(FILE *input_file) {
 
 bool FVParser::nextLine(list<FVParserToken> *result) {
     string line;
-    const int BUF_SIZE = 1024 * 1024;
-    char buffer[BUF_SIZE];
+    const int BUF_SIZE = 1024 * 1024 * 100;
+    static char buffer[BUF_SIZE];
     buffer[0] = '\0';
     do {
         fgets(buffer, BUF_SIZE, input);
@@ -134,4 +135,3 @@ bool FVParser::nextLine(list<FVParserToken> *result) {
         return false;
     }
 }
-

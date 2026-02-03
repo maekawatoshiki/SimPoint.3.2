@@ -71,6 +71,7 @@
 
 
 #include "CmdLineParser.h"
+#include <cstring>
 
 bool CmdLineParser::parseCmdLine(int argc, char **argv) {
     for (int argNdx = 0; argNdx < argc; argNdx++) {
@@ -237,5 +238,4 @@ bool CmdLineParser::specifyOption(const string &name, const string &argument) {
 
     return true;
 }
-
 
